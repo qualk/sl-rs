@@ -51,25 +51,25 @@ jobs:
 
       - name: Create archive (zip, windows)
         if: ${{ matrix.os == 'windows-latest' }}
-        run: tar.exe -a -c -f rust-sl-${{ matrix.target }}.zip ${{ matrix.output }}
+        run: tar.exe -a -c -f sl-rs-${{ matrix.target }}.zip ${{ matrix.output }}
 
       - name: Create archive (zip, macos)
         if: ${{ matrix.os == 'macos-latest' }}
-        run: zip rust-sl-${{ matrix.target }}.zip ${{ matrix.output }}
+        run: zip sl-rs-${{ matrix.target }}.zip ${{ matrix.output }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: rust-sl-${{ matrix.target }}.${{ matrix.archive }}
-          path: rust-sl-${{ matrix.target }}.${{ matrix.archive }}
+          name: sl-rs-${{ matrix.target }}.${{ matrix.archive }}
+          path: sl-rs-${{ matrix.target }}.${{ matrix.archive }}
 
       - name: Upload binary to release
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: rust-sl-${{ matrix.target }}.${{ matrix.archive }}
-          asset_name: rust-sl-${{ matrix.target }}.${{ matrix.archive }}
+          file: sl-rs-${{ matrix.target }}.${{ matrix.archive }}
+          asset_name: sl-rs-${{ matrix.target }}.${{ matrix.archive }}
           tag: ${{ github.ref }}
           overwrite: true
 

@@ -1,6 +1,0 @@
-{
-    "[rust]": {
-        "editor.formatOnPaste": false,
-        "editor.formatOnSave": false,
-    }
-}

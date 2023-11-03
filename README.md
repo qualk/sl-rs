@@ -5,22 +5,9 @@ SL (Steam Locomotive) runs across your terminal when you type "sl" as you meant 
 
 ## Installing
 
-### Using [Scoop](https://scoop.sh/)
-
-```PowerShell
-scoop bucket add siku https://github.com/amorphobia/siku
-scoop install rust-sl
-```
-
-### Using [cargo-binstall](https://crates.io/crates/cargo-binstall)
-
-```Shell
-cargo binstall rust-sl
-```
-
 ### Prebuilt Binaries
 
-Find and download from [release page](https://github.com/amorphobia/rust-sl/releases).
+Find and download from [release page](https://github.com/qualk/sl-rs/releases).
 
 ## Usage
 
@@ -42,7 +29,7 @@ sl [OPTIONS]
 ## License
 
 The original code was written in c by Toyoda Masashi. See [Original License](#original-license-c-version) below.
-The modified (rust) code is opensourced under [AGPL-3.0](https://github.com/amorphobia/rust-sl/blob/master/LICENSE).
+The modified (rust) code is opensourced under [AGPL-3.0](https://github.com/qualk/sl-rs/blob/master/LICENSE).
 
 ## Original License (c version)
 
