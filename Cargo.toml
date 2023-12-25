@@ -15,7 +15,7 @@ categories = ["command-line-utilities", "games"]
 [dependencies]
 clap = {version = "4.4.7", features = ["derive"]}
 crossterm = "0.26.1"
-ctrlc = "3.4.1"
+ctrlc = "3.4.2"
 lazy_static = "1.4.0"
 
 [profile.release]
